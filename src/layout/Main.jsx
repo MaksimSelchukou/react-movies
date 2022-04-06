@@ -38,12 +38,12 @@ export class Main extends React.Component {
         const { movies, loading } = this.state;
         return (
             <main className="container content">
-                <Search searchMovies={this.searchMovies} searchSeries={this.searchSeries} />
+                <Search searchMovies={this.searchMovies} />
                 {
                     loading ?
                         <Preloader />
                         :
-                        (<Movies loading={loading} movies={movies} />)
+                        (<Movies movies={movies} />)
                 }
             </main>
         )
